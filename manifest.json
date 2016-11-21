@@ -1,0 +1,21 @@
+{
+	"variables": [{
+		"key": "webhook",
+		"name": "URL",
+		"description": "The webhook URL optained from the Microsoft Teams website.",
+		"example": "https://outlook.office365.com/webhook/12a87f20-d765-45cf-b576-8cfb649667e8@42...",
+		"type": "text",
+		"required": true
+	}],
+	"rule": {
+		"title": "Post a message to Microsoft Teams on all new errors",
+		"query": "isNew:true AND (severity:Error OR severity:Fatal)",
+		"then": {
+			"type": "http",
+			"url": "$webhook",
+			"method": "post",
+			"contentType": "application/json",
+			"body": "{\"text\": \"$message\"}"
+		}
+	}
+}
