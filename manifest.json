@@ -9,7 +9,7 @@
 	}],
 	"rule": {
 		"title": "Post a message to Microsoft Teams on all new errors",
-		"query": "isNew:true AND (severity:Error OR severity:Fatal)",
+		"query": "(isNew:true AND (severity:Error OR severity:Fatal)) OR applicationName:\"Uptime Monitoring\"",
 		"then": {
 			"type": "http",
 			"url": "$webhook",
