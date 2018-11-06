@@ -15,7 +15,7 @@
 			"url": "$webhook",
 			"method": "post",
 			"contentType": "application/json",
-			"body": "{\"text\": \"$message\"}"
+			"body": "{\"summary\":\"<a href=\"https://app.elmah.io/errorlog/error?logid=$logId&id=$id\">New $severity in $logName</a>\",\"@type\":\"MessageCard\",\"title\":\"<a href=\"https://app.elmah.io/errorlog/error?logid=$logId&id=$id\">New $severity in $logName</a>\",\"themeColor\":\"$severityHex\",\"sections\":[{\"title\":\"$message\",\"facts\":[{\"name\":\"Type\",\"value\":\"$typeMarkdown\"},{\"name\":\"Application\",\"value\":\"$applicationName\"},{\"name\":\"URL\",\"value\":\"$url\"},{\"name\":\"Details\",\"value\":\"$detailJSON\"}]}],\"potentialAction\":[{\"@type\":\"OpenUri\",\"name\":\"Hide\",\"targets\":[{\"os\":\"default\",\"uri\":\"https://app.elmah.io/actions/hidemessage?logId=$logId&id=$id\"}]},{\"@type\":\"OpenUri\",\"name\":\"Mark as fixed\",\"targets\":[{\"os\":\"default\",\"uri\":\"https://app.elmah.io/actions/fixmessage?logId=$logId&id=$id\"}]},{\"@type\":\"OpenUri\",\"name\":\"Ignore in the future\",\"targets\":[{\"os\":\"default\",\"uri\":\"https://app.elmah.io/actions/ignoremessage?logId=$logId&id=$id\"}]},{\"@type\":\"OpenUri\",\"name\":\"Delete\",\"targets\":[{\"os\":\"default\",\"uri\":\"https://app.elmah.io/actions/deletemessage?logId=$logId&id=$id\"}]}]}"
 		}
 	}
 }
