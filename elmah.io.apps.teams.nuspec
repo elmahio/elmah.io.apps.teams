@@ -8,9 +8,10 @@
     <title>Microsoft Teams Integration</title>
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
     <description>Post a new chat message to Microsoft Teams when errors occur on elmah.io.</description>
-    <projectUrl>https://github.com/elmahio/elmah.io.apps.teams</projectUrl>
+    <projectUrl>https://elmah.io/</projectUrl>
+    <repository type="git" url="https://github.com/elmahio/elmah.io.apps.teams" />
     <iconUrl>https://elmah.io/images/appstore/elmah.io.apps.teams.png</iconUrl>
-	<tags>Error Exception Reporting Management Logging ELMAH Diagnostics Tracing Teams</tags>
+    <tags>Error Exception Reporting Management Logging ELMAH Diagnostics Tracing Teams</tags>
   </metadata>
   <files>
     <file src="manifest.json" target="manifest.json" />
