@@ -6,6 +6,7 @@
     <owners>elmah.io</owners>
     <id>elmah.io.apps.teams</id>
     <title>Microsoft Teams Integration</title>
+    <license type="expression">Apache-2.0</license>
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
     <description>Post a new chat message to Microsoft Teams when errors occur on elmah.io.</description>
     <projectUrl>https://elmah.io/</projectUrl>
